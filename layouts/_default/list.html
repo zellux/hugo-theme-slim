@@ -24,7 +24,7 @@
 		  {{ if .Site.Params.Summary }}
 		  	<div class="summary">
 				{{ .Summary }}
-				<a class="read-more" href="{{.RelPermalink}}">&hellip;</a>
+				<a class="read-more" href="{{.RelPermalink}}">{{.Site.Params.continueReadingText}}</a>
 			</div>
 		  {{ else if .Site.Params.Content }}
 			<div class="content">

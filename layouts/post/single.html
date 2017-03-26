@@ -16,6 +16,7 @@
           <div class="post-content">
             {{ .Content }}
           </div>
+          {{ partial "cc.html" . }}
         </div>
         <div class="pagination">{{ if .Prev }}
           <a class="btn previous " href="{{.Prev.Permalink}}"> Prev</a> {{ end }} {{ if .Next }}
@@ -23,6 +24,7 @@
         </div>
       </div>
     </div>
+
     {{ if .Params.comments }}
     <div id="disqus_thread"></div>
     <script>
