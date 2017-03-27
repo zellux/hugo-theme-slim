@@ -1,0 +1,9 @@
+<span class="post-meta">
+  <span class="post-date">{{ .Date.Format "Jan 2, 2006 " }}</span>
+  {{ if .Params.categories }}
+  <span class="post-categories">
+    •
+	{{ range $i, $e := .Params.categories }}{{if $i}}, {{end}}<a href="{{ $.Site.BaseURL }}categories/{{ $e | urlize }}">{{ . }}</a>{{ end }}
+  </span>
+  {{ end }}
+</span>

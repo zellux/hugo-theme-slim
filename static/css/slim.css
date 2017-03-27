@@ -343,7 +343,20 @@ button,
   font-size: 14px;
   margin-top: -25px;
   display:block;
-  position: relative; }
+  position: relative;
+}
+
+.post-meta {
+  color: #ccc;
+  font-size: 14px;
+  margin-top: -25px;
+  display:block;
+  position: relative;
+}
+
+.post-meta .post-date {
+  display: inline;
+}
 
 .post-content {
   margin: 2rem 0; }
@@ -362,6 +375,16 @@ button,
 }
 
 .post-tags a {
+	color: #ccc;
+}
+
+.post-meta .post-categories {
+  color: #ccc;
+  font-size: 14px;
+  max-width: 525px;
+}
+
+.post-categories a {
 	color: #ccc;
 }
 

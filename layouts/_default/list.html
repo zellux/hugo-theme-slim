@@ -21,6 +21,13 @@
 		  	{{ end }}
 		    </span>
 		  {{ end }}
+		  {{ if .Params.category }}
+			<span class="post-categories">
+		  	{{ range .Params.categories }}
+			          <a href="{{ $.Site.BaseURL }}categories/{{ . | urlize }}">{{ . }}</a>&nbsp;
+		  	{{ end }}
+		    </span>
+		  {{ end }}
 		  {{ if .Site.Params.Summary }}
 		  	<div class="summary">
 				{{ .Summary }}
