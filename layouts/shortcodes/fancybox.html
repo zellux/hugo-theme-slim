@@ -1,0 +1,1 @@
+<a data-fancybox="gallery" {{ with .Get "title"}} data-caption="{{.}}"{{ end }} href={{ .Get "src" }} ><img src={{ .Get "src" }} {{ with .Get "width"}} width="{{.}}"{{end}} /></a>
