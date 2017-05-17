@@ -1,5 +1,5 @@
 <span class="post-meta">
-  <span class="post-date">{{ .Date.Format "Jan 2, 2006 " }}</span>
+  <time datetime='{{ .Date.Format "Mon, Jan 2, 2006" }}' data-updated="true" itemprop="datePublished">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
   {{ if .Params.categories }}
   <span class="post-categories">
     •
