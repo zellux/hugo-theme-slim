@@ -398,3 +398,11 @@ button,
     background: url(http://i.creativecommons.org/l/by-nc/3.0/88x31.png) no-repeat 10px center;
     line-height: 1.6em;
 }
+
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
