@@ -11,10 +11,6 @@
 </div>
 
                    
-<script type="text/javascript" async
-  src="/MathJax/MathJax.js?config=TeX-AMS_HTML">
-</script>
-
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     jax: ["input/TeX", "output/HTML-CSS"],
@@ -50,4 +46,14 @@ MathJax.Hub.Queue(function() {
         all[i].SourceElement().parentNode.className += ' has-jax';
     }
 })
+</script>
+
+<script type="text/javascript" async
+  src="/MathJax/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+<script src="{{ .Site.BaseURL }}js/slim.js?{{ .Now.Unix }}">"></script>
+<script src="{{ .Site.BaseURL }}js/highlight.min.js?{{ .Now.Unix }}">"></script>
+<script>
+  hljs.initHighlightingOnLoad();
 </script>
