@@ -11,45 +11,8 @@
 </div>
 
                    
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-        <!-- inlineMath: [ ['$', '$'] ], -->
-        <!-- displayMath: [ ['$$', '$$']], -->
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        displayMath: [['$$','$$'], ['\[','\]']],
-        <!-- displayMath: [['$$','$$'], ['\\[','\\]']], -->
-        processEscapes: true,
-        processEnvironments: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        TeX: {
-            equationNumbers: { autoNumber: "AMS" },
-            extensions: ["AMSmath.js", "AMSsymbols.js"]
-        }
-    },
-    messageStyle: "none",
-    "HTML-CSS": {
-        preferredFont: "TeX",
-        availableFonts: ["STIX","TeX"]
-    }
-});
-</script>
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Queue(function() {
-    // Fix <code> tags after MathJax finishes running. This is a
-    // hack to overcome a shortcoming of Markdown. Discussion at
-    // https://github.com/mojombo/jekyll/issues/199
-    var all = MathJax.Hub.getAllJax();
-    for (var i in all) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-})
-</script>
-
 <script type="text/javascript" async
-  src="/MathJax/MathJax.js?config=TeX-AMS_HTML">
+  src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 <script src="{{ .Site.BaseURL }}js/slim.js?{{ now }}">"></script>
