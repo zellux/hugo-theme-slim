@@ -52,8 +52,8 @@ MathJax.Hub.Queue(function() {
   src="/MathJax/MathJax.js?config=TeX-AMS_HTML">
 </script>
 
-<script src="{{ .Site.BaseURL }}js/slim.js?{{ .Now.Unix }}">"></script>
-<script src="{{ .Site.BaseURL }}js/highlight.min.js?{{ .Now.Unix }}">"></script>
+<script src="{{ .Site.BaseURL }}js/slim.js?{{ now }}">"></script>
+<script src="{{ .Site.BaseURL }}js/highlight.min.js?{{ now }}">"></script>
 <script>
   hljs.initHighlightingOnLoad();
 </script>
