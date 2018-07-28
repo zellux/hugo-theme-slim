@@ -11,12 +11,25 @@
 </div>
 
                    
-<script type="text/javascript" async
-  src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    Macros: {
+      argmax: "\\operatorname*{argmax}",
+      argmin: "\\operatorname*{argmin}"
+    }
+  },
+  jax: ["input/TeX","output/CommonHTML"]
+});
 </script>
 
-<script src="{{ .Site.BaseURL }}js/slim.js?{{ now }}">"></script>
-<script src="{{ .Site.BaseURL }}js/highlight.min.js?{{ now }}">"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+</script>
+<script src="{{ .Site.BaseURL }}js/slim.js?{{ now }}"></script>
+<script src="{{ .Site.BaseURL }}js/highlight.min.js?{{ now }}"></script>
 <script>
   hljs.initHighlightingOnLoad();
 </script>
