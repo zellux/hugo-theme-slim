@@ -1,3 +1,4 @@
+<!-- TODO: change hard coded author -->
 <script type="application/ld+json">
 {
     "@context" : "http://schema.org",
@@ -11,9 +12,9 @@
     "headline" : "{{ .Title }}",
     "description" : "{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}",
     "inLanguage" : "en-US",
-    "author" : "{{ range .Site.Author }}{{ . }}{{ end }}",
-    "creator" : "{{ range .Site.Author }}{{ . }}{{ end }}",
-    "publisher": "{{ range .Site.Author }}{{ . }}{{ end }}",
+    "author" : "zellux",
+    "creator" : "zellux",
+    "publisher": "zellux",
     "accountablePerson" : "{{ range .Site.Author }}{{ . }}{{ end }}",
     "copyrightHolder" : "{{ range .Site.Author }}{{ . }}{{ end }}",
     "copyrightYear" : "{{ .Date.Format "2006" }}",

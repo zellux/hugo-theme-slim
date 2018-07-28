@@ -1,5 +1,7 @@
 html {
-  box-sizing: border-box; }
+    box-sizing: border-box;
+    text-rendering: optimizelegibility;
+}
 
 *,
 *:before,
@@ -42,10 +44,12 @@ tbody tr:nth-child(odd) th {
 body {
   color: #555;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', Arial, Serif;
+  /* font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans; */
   font-size: 100%;
   font-weight: 400;
   line-height: 1.85;
-  letter-spacing: 0.01rem; }
+  letter-spacing: 0.01rem;
+}
 
 h1,
 h2,
@@ -56,7 +60,8 @@ h6 {
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  font-family: 'Source Sans Pro', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  font-family: 'Source Sans Pro', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
 h1 {
   font-size: 1.8rem; }
@@ -174,13 +179,18 @@ button,
 
 .header {
   position: relative;
-  margin: 3rem auto; }
+  margin: 3rem 0.5rem; }
 
 .site-title {
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
   font-size: 1.5rem;
-  font-weight: 700; }
-  .site-title a {
-    color: #333; }
+  font-weight: 700;
+}
+
+.site-title a {
+  color: #333;
+}
 
 .nav {
   position: absolute;
@@ -292,7 +302,10 @@ button,
 
 .post {
   position: relative;
-  margin-bottom: 2rem; }
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
+
 
 .post-title:after {
   content: '';
@@ -405,4 +418,9 @@ code.has-jax {
     background: inherit;
     border: inherit;
     color: #515151;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.8em;
 }
