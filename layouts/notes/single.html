@@ -1,48 +1,19 @@
-<!DOCTYPE html>
-<html>
+{{ partial "head.html" . }}
 
-<head>
-  {{ partial "head.html" . }}
-</head>
-
-<body>
-  <div class="container">
-    {{ partial "header.html" . }}
-    <div class="content">
-      <div class="posts">
-        <div class="post">
-          <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-          <div class="post-content">
-            {{ .Content }}
-          </div>
-          {{ partial "cc.html" . }}
-        </div>
-        <div class="pagination">{{ if .Prev }}
-          <a class="btn previous " href="{{.Prev.Permalink}}"> Prev</a> {{ end }} {{ if .Next }}
-          <a class="btn next " href="{{.Next.Permalink}}"> Next</a> {{ end }}
-        </div>
+<div class="content">
+  <div class="posts">
+    <div class="post">
+      <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+      <div class="post-content">
+        {{ .Content }}
       </div>
+      {{ partial "cc.html" . }}
     </div>
-
-    {{ if .Params.comments }}
-    <div id="disqus_thread"></div>
-    <script>
-      var disqus_config = function () {
-        this.page.url = {{ .Permalink }};
-        // this.page.identifier = PAGE_IDENTIFIER;
-      };
-      (function() {
-        var d = document, s = d.createElement('script');
-        s.src = '//{{ .Site.Params.DisqusShortname }}.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-    {{ end }}
-    {{ partial "footer.html" . }}
+    <div class="pagination">{{ if .Prev }}
+      <a class="btn previous " href="{{.Prev.Permalink}}"> Prev</a> {{ end }} {{ if .Next }}
+      <a class="btn next " href="{{.Next.Permalink}}"> Next</a> {{ end }}
+    </div>
   </div>
-  {{ with .Site.Params.AnalyticsID }}{{ partial "analytics.html" . }}{{ end }}
-</body>
+</div>
 
-</html>
+{{ partial "footer.html" . }}
