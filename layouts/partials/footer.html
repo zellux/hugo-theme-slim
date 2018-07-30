@@ -30,15 +30,16 @@ MathJax.Hub.Config({
 </script>
 
 </script>
-<script src="{{ .Site.BaseURL }}js/slim.js?{{ now }}"></script>
-<script src="{{ .Site.BaseURL }}js/highlight.min.js?{{ now }}"></script>
+<script src="/js/slim.js?{{ now.Unix }}"></script>
+
+<link rel="stylesheet" href="/css/solarized-light.css">
+<script src="/js/highlight.pack.js"></script>
 <script>
   hljs.initHighlightingOnLoad();
 </script>
 
 </div>
 
-<script src="{{ .Site.BaseURL }}js/slim.js"></script>
 {{ with .Site.Params.AnalyticsID }}{{ partial "analytics.html" . }}{{ end }}
 
 </body>
