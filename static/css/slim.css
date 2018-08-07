@@ -181,18 +181,22 @@ button:active,
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
+.nav {
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+    overflow: auto;
+}
+.nav-container {
+    text-align: left;
+    max-width: 800px;
+    margin: 1rem auto;
+    width: 80%;
+}
 .header {
     position: relative;
     margin: 3rem 0.5rem;
 }
-.site-title {
-    text-align: center;
-}
-
-.site-title {
-    line-height: 1.25;
-    margin-bottom: 0.75rem;
-    font-size: 2rem;
+.nav .site-title {
+    font-size: 1.5rem;
     font-weight: 700;
 }
 .site-title a {
@@ -205,52 +209,10 @@ button:active,
 .site-nav .nav-item {
     padding: 0 10px;
     line-height: 40px;
-    font-size: 1.25em;
+    font-size: 1em;
 }
 .nav-item a {
-    color: #333;
-}
-.nav {
-    position: absolute;
-    top: 0;
-    left: -15px;
-    transform: translateX(-100%);
-    text-align: right;
-}
-.nav-btn {
-    display: inline-block;
-    line-height: 16px;
-}
-.nav-btn.is-on .ci-burger {
-    background: transparent;
-}
-.nav-btn.is-on .ci-burger::before {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    top: 0;
-}
-.nav-btn.is-on .ci-burger::after {
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    bottom: 0;
-}
-.nav-btn.is-on + .nav-list {
-    opacity: 1;
-}
-.nav-list {
-    background: #fff;
-    list-style: none;
-    font-size: 0.9rem;
-    margin-top: 1rem;
-    padding: 0;
-    opacity: 0;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-}
-.nav-list .spacer {
-    text-align: center;
+    color: #555;
 }
 .ci {
     display: inline-block;
@@ -294,7 +256,7 @@ button:active,
 .container {
     *zoom: 1;
     width: auto;
-    max-width: 42em;
+    max-width: 800px;
     float: none;
     display: block;
     margin-right: auto;
@@ -337,15 +299,17 @@ button:active,
 .footer a {
     color: #333;
 }
+.posts .post {
+    border-bottom: 1px solid #ccc;
+}
 .post {
     position: relative;
-    margin-bottom: 0.5rem;
-    margin-left: 0.5rem;
+    padding-bottom: 1rem;
 }
 .post-title:after {
     content: '';
     display: block;
-    border-top: 1px solid #ccc;
+    /* border-top: 1px solid #ccc; */
     width: 100%;
     position: absolute;
     top: 30px;

@@ -1,19 +1,17 @@
 {{ partial "head.html" . }}
 
 <div class="content">
-  <div class="posts">
-    <div class="post">
-      <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-      {{ partial "post-meta.html" . }}
-      <div class="post-content">
-        {{ .Content }}
-      </div>
-      {{ partial "cc.html" . }}
+  <div class="post">
+    <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+    {{ partial "post-meta.html" . }}
+    <div class="post-content">
+      {{ .Content }}
     </div>
-    <div class="pagination">{{ if .Prev }}
-      <a class="btn previous " href="{{.Prev.Permalink}}"> Prev</a> {{ end }} {{ if .Next }}
-      <a class="btn next " href="{{.Next.Permalink}}"> Next</a> {{ end }}
-    </div>
+    {{ partial "cc.html" . }}
+  </div>
+  <div class="pagination">{{ if .Prev }}
+    <a class="btn previous " href="{{.Prev.Permalink}}"> Prev</a> {{ end }} {{ if .Next }}
+    <a class="btn next " href="{{.Next.Permalink}}"> Next</a> {{ end }}
   </div>
 </div>
 
