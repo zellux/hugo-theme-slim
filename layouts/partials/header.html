@@ -1,30 +1,13 @@
 <div class="header">
-  <span class="site-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></span>
-  <p class="site-tagline">{{ .Site.Params.Subtitle }}</p>
-  <div class="nav">
-    <a class="nav-btn" href="#">
-      <span class="ci ci-burger"></span>
-    </a>
-    <ul class="nav-list">
+  <div class="site-header">
+    <span class="site-title">
+      <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    </span>
+    <!-- <p class="site-tagline">{{ .Site.Params.Subtitle }}</p> -->
+    <div class="site-nav">
       {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-      {{end}} 
-      <li class="spacer">&ac;</li>
-      {{ with .Site.Params.GithubID }}
-      <li>
-        <a href="https://github.com/{{.}}" target="_blank">Github</a>
-      </li>
-      {{ end }}
-      {{ with .Site.Params.TwitterID }}
-      <li>
-        <a href="https://twitter.com/{{.}}" target="_blank">Twitter</a>
-      </li>
-      {{ end }}
-      {{ with .Site.Params.LinkedInID }}
-      <li>
-        <a href="http://linkedin.com/in/{{.}}" target="_blank">LinkedIn</a>
-      </li>
-      {{ end }}
-    </ul>
+      <span class="nav-item"><a href="{{ .URL }}">{{ .Name }}</a></span>
+      {{end}}
+    </div>
   </div>
 </div>

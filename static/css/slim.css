@@ -186,12 +186,28 @@ button:active,
     margin: 3rem 0.5rem;
 }
 .site-title {
+    text-align: center;
+}
+
+.site-title {
     line-height: 1.25;
     margin-bottom: 0.75rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 .site-title a {
+    color: #333;
+}
+.site-nav {
+    float: right;
+    text-align: right;
+}
+.site-nav .nav-item {
+    padding: 0 10px;
+    line-height: 40px;
+    font-size: 1.25em;
+}
+.nav-item a {
     color: #333;
 }
 .nav {
