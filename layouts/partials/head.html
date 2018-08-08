@@ -7,7 +7,7 @@
     <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}">
     <meta name="author" content="zellux">
 
-    <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
+    <title> {{ .Title }}{{ if not .IsHome }} &middot; {{ .Site.Title }} {{ end }}</title>
 
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />

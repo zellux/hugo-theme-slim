@@ -1,6 +1,6 @@
 {{ partial "head.html" . }}
 
-<div class="content">
+<div class="content index">
   <div class="posts">
     {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }} {{ range $paginator.Pages }}
     <div class="post">
@@ -8,7 +8,7 @@
       {{ partial "post-meta.html" . }}
       {{ if .Site.Params.Summary }}
       <div class="summary">
-	{{ .Summary }}
+        {{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}
 	<a class="read-more" href="{{.RelPermalink}}">{{.Site.Params.continueReadingText}}</a>
       </div>
       {{ else if .Site.Params.Content }}

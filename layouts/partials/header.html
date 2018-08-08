@@ -4,7 +4,7 @@
       <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     </span>
     <!-- <p class="site-tagline">{{ .Site.Params.Subtitle }}</p> -->
-    <div class="site-nav">
+    <div class="nav-list">
       {{ range .Site.Menus.main }}
       <span class="nav-item"><a href="{{ .URL }}">{{ .Name }}</a></span>
       {{end}}
