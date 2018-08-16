@@ -9,12 +9,12 @@
 
     <title> {{ .Title }}{{ if not .IsHome }} &middot; {{ .Site.Title }} {{ end }}</title>
 
-    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="/css/jquery.fancybox.min.css" />
+    <script src="/js/jquery-3.0.47.fancybox.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/slim.css?{{ now }}">
+    <link rel="stylesheet" href="/css/slim.css?{{ now.Unix }}">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
     <!-- Icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
