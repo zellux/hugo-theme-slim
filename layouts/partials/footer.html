@@ -30,9 +30,11 @@ MathJax.Hub.Config({
 </script>
 
 </script>
-<script src="/js/slim.js?{{ now.Unix }}"></script>
+{{ $main_js := resources.Get "js/slim.js" | minify | fingerprint }}
+<script src="{{ $main_js.Permalink }}"></script>
 
-<link rel="stylesheet" href="/css/solarized-light.css">
+{{ $highlight_css := resources.Get "css/solarized-light.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $highlight_css.Permalink }}" />
 <script src="/js/highlight.pack.js"></script>
 <script>
   hljs.initHighlightingOnLoad();

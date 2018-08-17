@@ -14,7 +14,9 @@
     <script src="/js/jquery-3.0.47.fancybox.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/slim.css?{{ now.Unix }}">
+    {{ $main_css := resources.Get "css/slim.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $main_css.Permalink }}">
+    
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
     <!-- Icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
