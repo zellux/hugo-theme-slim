@@ -2,7 +2,7 @@
 
 <div class="content">
   <div class="posts">
-    {{ range (where .Site.Pages "Type" "post") }}
+    {{ range (where .Site.RegularPages "Type" "post") }}
     <div class="post">
       <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
       <span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
