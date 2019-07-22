@@ -10,7 +10,7 @@
       {{ partial "cc.html" . }}
     </div>
     <div class="pagination">{{ if .NextPage }}
-      <a class="btn previous " href="{{.NextPage.Permalink}}"> Prev</a> {{ end }} {{ if .Next }}
+      <a class="btn previous " href="{{.NextPage.Permalink}}"> Prev</a> {{ end }} {{ if .PrevPage }}
       <a class="btn next " href="{{.PrevPage.Permalink}}"> Next</a> {{ end }}
     </div>
   </div>
