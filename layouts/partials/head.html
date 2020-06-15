@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="description" content="{{if .IsPage}}{{ .Params.Summary }}{{ else }}{{ if .Description }}{{ .Description }}{{ end }}{{ end }}">
     <meta name="author" content="zellux">
+    {{ if .IsPage }}
+    <meta name="keywords" content="{{ delimit .Keywords ", " }}{{ if .Params.categories }}, {{ delimit .Params.categories ", " }}{{ end }}{{ if .Params.tags }}, {{ delimit .Params.tags ", " }}{{ end }}">
+    {{ end }}
 
     <title> {{ .Title }}{{ if not .IsHome }} &middot; {{ .Site.Title }} {{ end }}</title>
 

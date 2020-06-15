@@ -42,7 +42,7 @@ tbody tr:nth-child(odd) th {
 }
 body {
     color: #555;
-    font: 400 1em/1.8 Lato, Gill Sans, Helvetica, PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, san-serif;
+    font: 400 1em/1.8 -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
     font-size: 100%;
     line-height: 1.85;
     letter-spacing: 0.01rem;
