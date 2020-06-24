@@ -49,6 +49,8 @@ body {
 }
 body .container.lang-en {
     font-family: 'freight-sans-pro', 'Arial';
+    font-size: 1.125em;
+    line-height: 1.5;
 }
 h1,
 h2,
@@ -69,6 +71,7 @@ body .container.lang-en h5,
 body .container.lang-en h6 {
     font-family: 'freight-sans-pro', 'Arial';
     line-height: 1;
+    font-weight: 500;
 }
 h1 {
     font-size: 1.8rem;
