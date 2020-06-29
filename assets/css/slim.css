@@ -88,10 +88,7 @@ h5,
 h6 {
     font-size: 1rem;
 }
-p,
-dl,
-ol,
-ul {
+p {
     margin-top: 0;
     margin-bottom: 1.75rem;
 }
