@@ -448,3 +448,13 @@ figcaption {
         padding-right: 0.5em;
     }
 }
+table.course-syllabus tbody tr {
+    background-color: #fff;
+}
+table.course-syllabus tbody tr td,
+table.course-syllabus tbody tr th {
+    background-color: #fff;
+}
+table.course-syllabus tr.section-header td {
+    background-color: #eee;
+}
